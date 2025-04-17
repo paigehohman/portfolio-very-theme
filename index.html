@@ -38,11 +38,49 @@
 
   <body>
     <div id="demo">
-      <h1>portfolio-very-theme</h1>
-      <!-- this is going to do whatever the tag's defaults are -->
-      <h2>Default</h2>
-      <portfolio-very-theme></portfolio-very-theme>
-      
+      <h1>Portfolio</h1>
+      <your-banner>
+        <a href="#1">About</a>
+        <a href="#2">Research</a>
+        <a href="#3">Presentations & Publications</a>
+        <a href="#4">Professional Development</a>
+        <a href="#5">Contact</a>
+      </your-banner>
+    </div>
+    <div class="red">
+      <a name="2"></a>
+    </div>
+    <div class="blue">
+      <a name="3"></a>
+    </div>
+    <div class="yellow">
+      <a name="4"></a>
+    </div>
+    <div class="red">
+      <a name="5"></a>
+    </div>
+    <portfolio-very-theme>
+      <portfolio-screen title="About">
+        <p>A bunch of content here</p>
+      </portfolio-screen>
+
+      <portfolio-screen title="Research">
+        <p>A bunch of content here</p>
+      </portfolio-screen>
+    </portfolio-very-theme>
+
+    <portfolio-screen title="Presentations & Publications">
+      <p>A bunch of content here</p>
+    </portfolio-screen>
+
+    <portfolio-screen title="Professional Development">
+      <p>A bunch of content here</p>
+    </portfolio-screen>
+
+    <portfolio-screen title="Contact">
+      <p>A bunch of content here</p>
+    </portfolio-screen>
+
     <script type="module" src="./portfolio-very-theme.js"></script>
 
     <!-- Take HAX, the Web and you further down the rabbit hole -->
