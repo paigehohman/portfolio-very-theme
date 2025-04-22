@@ -12,9 +12,9 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
  * @demo index.html
  * @element final-test
  */
-export class FinalTest extends DDDSuper(I18NMixin(LitElement)) {
+export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
   static get tag() {
-    return "final-test";
+    return "portfolio-very-header";
   }
 
   constructor() {
@@ -50,6 +50,7 @@ export class FinalTest extends DDDSuper(I18NMixin(LitElement)) {
           display: block;
           color: var(--ddd-theme-primary);
           background-color: var(--ddd-theme-accent);
+          background-color: green;
           font-family: var(--ddd-font-navigation);
         }
         .wrapper {
@@ -59,7 +60,6 @@ export class FinalTest extends DDDSuper(I18NMixin(LitElement)) {
         h3 span {
           font-size: var(--final-test-label-font-size, var(--ddd-font-size-s));
         }
-
         :root {
           scroll-behavior: smooth;
         }
@@ -74,22 +74,16 @@ export class FinalTest extends DDDSuper(I18NMixin(LitElement)) {
           background-color: orange;
         }
 
-        .red {
+        ::slotted(.red) {
           background-color: red;
-        }
-        .yellow {
-          background-color: yellow;
-        }
-        .blue {
-          background-color: blue;
         }
 
         your-banner a {
-          border: 2px solid green;
+          border: 2px solid black;
           padding: 10px;
           display: inline-block;
           margin: 10px;
-          background-color: green;
+          background-color: black;
           color: white;
           text-decoration: none;
         }
@@ -113,6 +107,13 @@ export class FinalTest extends DDDSuper(I18NMixin(LitElement)) {
   // Lit render the HTML
   render() {
     return html` <div class="wrapper">
+      <your-banner>
+        <a href="#1">About</a>
+        <a href="#2">Research</a>
+        <a href="#3">Presentations and Publications</a>
+        <a href="#4">Professional Development</a>
+        <a href="#5">Contact</a>
+      </your-banner>
       <h3><span>${this.t.title}:</span> ${this.title}</h3>
       <slot></slot>
     </div>`;
@@ -127,4 +128,4 @@ export class FinalTest extends DDDSuper(I18NMixin(LitElement)) {
   }
 }
 
-globalThis.customElements.define(FinalTest.tag, FinalTest);
+globalThis.customElements.define(PortfolioVeryHeader.tag, PortfolioVeryHeader);

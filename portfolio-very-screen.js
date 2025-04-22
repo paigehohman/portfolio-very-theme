@@ -12,9 +12,9 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
  * @demo index.html
  * @element final-test
  */
-export class FinalTest extends DDDSuper(I18NMixin(LitElement)) {
+export class PortfolioVeryScreen extends DDDSuper(I18NMixin(LitElement)) {
   static get tag() {
-    return "final-test";
+    return "portfolio-very-screen";
   }
 
   constructor() {
@@ -48,6 +48,7 @@ export class FinalTest extends DDDSuper(I18NMixin(LitElement)) {
       css`
         :host {
           display: block;
+          height: 100vh;
           color: var(--ddd-theme-primary);
           background-color: var(--ddd-theme-accent);
           font-family: var(--ddd-font-navigation);
@@ -80,4 +81,4 @@ export class FinalTest extends DDDSuper(I18NMixin(LitElement)) {
   }
 }
 
-globalThis.customElements.define(FinalTest.tag, FinalTest);
+globalThis.customElements.define(PortfolioVeryScreen.tag, PortfolioVeryScreen);

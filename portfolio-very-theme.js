@@ -5,11 +5,11 @@
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
+import "./portfolio-very-screen.js";
+import "./portfolio-very-header.js";
 
-//PAIGE, YOU ADDED THIS IN
+// PAIGE, YOU ADDED THIS IN
 import "@haxtheweb/scroll-button/scroll-button.js";
-
-<scroll-button></scroll-button>;
 
 /**
  * `portfolio-very-theme`
