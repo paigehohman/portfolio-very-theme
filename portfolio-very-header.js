@@ -44,31 +44,7 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
           display: block;
           color: var(--ddd-theme-primary);
           background-color: var(--ddd-theme-accent);
-          background-color: var(--ddd-theme-default-nittanyNavy);
           font-family: var(--ddd-font-navigation);
-        }
-        .wrapper {
-          margin: var(--ddd-spacing-2);
-          padding: var(--ddd-spacing-4);
-        }
-        h3 span {
-          font-size: var(--final-test-label-font-size, var(--ddd-font-size-s));
-        }
-        :root {
-          scroll-behavior: smooth;
-        }
-        div h1 {
-          margin-top: 200px;
-        }
-        div {
-          padding: 100px;
-          width: calc(100vw - 200px);
-          overflow-x: hidden;
-          height: 100vh;
-        }
-
-        ::slotted(.red) {
-          background-color: red;
         }
 
         your-banner a {
@@ -107,7 +83,6 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
         <a href="#4">Professional Development</a>
         <a href="#5">Contact</a>
       </your-banner>
-      <h3><span>${this.t.title}:</span> ${this.title}</h3>
       <slot></slot>
     </div>`;
   }
