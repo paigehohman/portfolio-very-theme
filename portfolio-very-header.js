@@ -50,7 +50,7 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
           display: block;
           color: var(--ddd-theme-primary);
           background-color: var(--ddd-theme-accent);
-          background-color: green;
+          background-color: var(--ddd-theme-default-nittanyNavy);
           font-family: var(--ddd-font-navigation);
         }
         .wrapper {
@@ -71,7 +71,6 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
           width: calc(100vw - 200px);
           overflow-x: hidden;
           height: 100vh;
-          background-color: orange;
         }
 
         ::slotted(.red) {

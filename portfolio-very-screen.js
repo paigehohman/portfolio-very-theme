@@ -60,6 +60,21 @@ export class PortfolioVeryScreen extends DDDSuper(I18NMixin(LitElement)) {
         h3 span {
           font-size: var(--final-test-label-font-size, var(--ddd-font-size-s));
         }
+        :host(.about) {
+          background-color: var(--ddd-theme-default-beaverBlue);
+        }
+        :host(.research) {
+          background-color: var(--ddd-theme-default-beaver70);
+        }
+        :host(.presentations) {
+          background-color: var(--ddd-theme-default-beaver80);
+        }
+        :host(.professional) {
+          background-color: var(--ddd-theme-default-navy40);
+        }
+        :host(.contact) {
+          background-color: var(--ddd-theme-default-navy60);
+        }
       `,
     ];
   }
