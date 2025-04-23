@@ -25,12 +25,6 @@ export class PortfolioVeryScroll extends DDDSuper(I18NMixin(LitElement)) {
       ...this.t,
       title: "Title",
     };
-    this.registerLocalization({
-      context: this,
-      localesPath:
-        new URL("./locales/final-test.ar.json", import.meta.url).href + "/../",
-      locales: ["ar", "es", "hi", "zh"],
-    });
   }
 
   // Lit reactive properties
@@ -74,10 +68,6 @@ export class PortfolioVeryScroll extends DDDSuper(I18NMixin(LitElement)) {
   /**
    * haxProperties integration via file reference
    */
-  static get haxProperties() {
-    return new URL(`./lib/${this.tag}.haxProperties.json`, import.meta.url)
-      .href;
-  }
 }
 
 globalThis.customElements.define(PortfolioVeryScroll.tag, PortfolioVeryScroll);

@@ -25,12 +25,6 @@ export class PortfolioVeryScreen extends DDDSuper(I18NMixin(LitElement)) {
       ...this.t,
       title: "Title",
     };
-    this.registerLocalization({
-      context: this,
-      localesPath:
-        new URL("./locales/final-test.ar.json", import.meta.url).href + "/../",
-      locales: ["ar", "es", "hi", "zh"],
-    });
   }
 
   // Lit reactive properties
@@ -62,18 +56,23 @@ export class PortfolioVeryScreen extends DDDSuper(I18NMixin(LitElement)) {
         }
         :host(.about) {
           background-color: var(--ddd-theme-default-beaverBlue);
+          color: var(--ddd-theme-default-slateMaxLight);
         }
         :host(.research) {
           background-color: var(--ddd-theme-default-beaver70);
+          color: var(--ddd-theme-default-slateMaxLight);
         }
         :host(.presentations) {
           background-color: var(--ddd-theme-default-beaver80);
+          color: var(--ddd-theme-default-slateMaxLight);
         }
         :host(.professional) {
           background-color: var(--ddd-theme-default-navy40);
+          color: var(--ddd-theme-default-slateMaxLight);
         }
         :host(.contact) {
           background-color: var(--ddd-theme-default-navy60);
+          color: var(--ddd-theme-default-slateMaxLight);
         }
       `,
     ];
@@ -90,10 +89,6 @@ export class PortfolioVeryScreen extends DDDSuper(I18NMixin(LitElement)) {
   /**
    * haxProperties integration via file reference
    */
-  static get haxProperties() {
-    return new URL(`./lib/${this.tag}.haxProperties.json`, import.meta.url)
-      .href;
-  }
 }
 
 globalThis.customElements.define(PortfolioVeryScreen.tag, PortfolioVeryScreen);

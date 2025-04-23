@@ -32,13 +32,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     };
     this.active = {};
     this.skipped = false;
-    this.registerLocalization({
-      context: this,
-      localesPath:
-        new URL("./locales/hax-the-club.ar.json", import.meta.url).href +
-        "/../",
-      locales: ["ar", "es", "hi", "zh"],
-    });
+
     this.screen = 0;
     this.screens = [];
     this.addEventListener("screen-change", (e) => {
