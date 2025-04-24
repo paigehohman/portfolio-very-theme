@@ -18,19 +18,60 @@
       }
       #demo {
         margin: var(--ddd-spacing-2);
+        margin-bottom: 100px;
       }
-      portfolio-very-theme {
-        margin: var(--ddd-spacing-2);
-        border: var(--ddd-border-md);
-        border-radius: var(--ddd-radius-lg);
-      }
-      portfolio-very-theme:hover {
-        box-shadow: var(--ddd-boxShadow-sm);
-      }
+
       #example {
         --portfolio-very-theme-font-size: var(--ddd-font-size-l);
         background-color: var(--ddd-accent-2);
         color: var(--ddd-primary-17);
+      }
+
+      .profile-pic {
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        border: 4px solid var(--ddd-theme-primary);
+      }
+      .norwin-pic {
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        border: 4px solid var(--ddd-theme-primary);
+      }
+      .bio-text {
+        max-width: 600px;
+        text-align: left;
+        margin-left: auto;
+        font-size: 1.3rem;
+      }
+      .work-text {
+        max-width: 600px;
+        text-align: left;
+        margin-left: auto;
+        font-size: 1.3rem;
+        line-height: 1.6;
+      }
+      .about-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        width: 100%;
+      }
+      .contact-pic {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 4px solid var(-ddd-theme-primary);
+      }
+      .work-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        max-width: 1000px;
+        width: 100%;
       }
     </style>
     <title>portfolio-very-theme</title>
@@ -41,33 +82,72 @@
       <h1>Portfolio</h1>
       <portfolio-very-header> </portfolio-very-header>
     </div>
-    <portfolio-very-theme data-accent="2" data-primary="17">
+    <portfolio-very-theme data-accent="2" data-primary="2">
       <portfolio-very-screen class="about" id="1" title="About">
-        <p>About</p>
+        <div class="about-content">
+          <img src="Headshot.jpeg" alt="Headshot" class="profile-pic" />
+          <div class="bio-text">
+            <p>
+              Hi there, I'm Paige Hohman! I'm a second-year student at Penn
+              State University majoring in Enterprise Technology Integration.
+              I'm passionate about web design, networking, and software
+              development. I'm eager to apply the knowledge and skills I've
+              gained through my studies in real-world settings. I'm actively
+              seeking opportunities that will allow me to grow, contribute, and
+              make a meaningful impact.
+            </p>
+          </div>
+        </div>
       </portfolio-very-screen>
 
-      <portfolio-very-screen class="research" id="2" title="Research">
-        <p>Research</p>
+      <portfolio-very-screen class="resume" id="2" title="Resume">
+        <p>Resume</p>
       </portfolio-very-screen>
 
-      <portfolio-very-screen
-        class="presentations"
-        id="3"
-        title="Presentations & Publications"
-      >
+      <portfolio-very-screen class="projects" id="3" title="Projects">
         <p>Presentations & Publications</p>
       </portfolio-very-screen>
 
-      <portfolio-very-screen
-        class="professional"
-        id="4"
-        title="Professional Development"
-      >
-        <p>Professional Development</p>
+      <portfolio-very-screen class="work" id="4" title="Work Experience">
+        <div class="work-content">
+          <img
+            src="https://www.norwinsd.org/pics/NORS_LOGO.gif"
+            alt="Norwin SD"
+            class="norwin-pic"
+          />
+          <div class="work-text">
+            <ul>
+              <li>Incoming IT Intern at Norwin School District</li>
+              <li>Previously a server at Anthony's Coal Fired Pizza</li>
+              <li>Previously a server at Pulp Juice & Smoothie Bar</li>
+            </ul>
+          </div>
+        </div>
       </portfolio-very-screen>
 
       <portfolio-very-screen class="contact" id="5" title="Contact">
-        <p>Contact</p>
+        <div class="contact-content">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/93/Google_Contacts_icon.svg"
+            alt="Logo"
+            class="contact-pic"
+          />
+          <div class="contact-text">
+            <ul>
+              <li>Email: paigehohman@gmail.com</li>
+              <li>Phone: 724-900-8081</li>
+              <li>
+                LinkedIn:
+                <a
+                  href="https://www.linkedin.com/in/paige-hohman-1b80a529a/"
+                  target="_blank"
+                  >www.linkedin.com/in/paigehohman</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p>Get In Touch</p>
       </portfolio-very-screen>
     </portfolio-very-theme>
 

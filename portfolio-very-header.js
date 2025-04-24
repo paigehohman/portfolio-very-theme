@@ -48,11 +48,10 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
         }
 
         your-banner a {
-          border: 2px solid black;
           padding: 10px;
           display: inline-block;
           margin: 10px;
-          background-color: black;
+          background-color: var(--ddd-theme-default-slateGray);
           color: white;
           text-decoration: none;
         }
@@ -61,7 +60,7 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: #00000066;
+          background-color: var(--ddd-theme-default-nittanyNavy);
           position: fixed;
           top: 100px;
           left: 0;
@@ -78,9 +77,9 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
     return html` <div class="wrapper">
       <your-banner>
         <a href="#1">About</a>
-        <a href="#2">Research</a>
-        <a href="#3">Presentations and Publications</a>
-        <a href="#4">Professional Development</a>
+        <a href="#2">Resume</a>
+        <a href="#3">Projects</a>
+        <a href="#4">Work Experience</a>
         <a href="#5">Contact</a>
       </your-banner>
       <slot></slot>

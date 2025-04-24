@@ -24,17 +24,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
 
   constructor() {
     super();
-    this.t = this.t || {};
-    this.t = {
-      ...this.t,
-      haxTheClub: "HAX The Club",
-      skip: "Skip",
-    };
-    this.active = {};
-    this.skipped = false;
-
-    this.screen = 0;
-    this.screens = [];
+    this.pages = [];
     this.addEventListener("screen-change", (e) => {
       let tmp = this.screen + parseInt(e.detail.direction);
       if (tmp > this.screens.length - 1) {
@@ -112,6 +102,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       title: { type: String },
+      pages: { type: Array },
     };
   }
 
@@ -122,19 +113,30 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       css`
         :host {
           display: block;
+          height: 100vh;
           color: var(--ddd-theme-primary);
-          background-color: var(--ddd-theme-accent);
+
           font-family: var(--ddd-font-navigation);
         }
-        .wrapper {
-          margin: var(--ddd-spacing-2);
-          padding: var(--ddd-spacing-4);
-        }
+
         h3 span {
           font-size: var(
             --portfolio-very-theme-label-font-size,
             var(--ddd-font-size-s)
           );
+        }
+        scroll-button {
+          position: fixed;
+          right: 20px;
+          bottom: 20px;
+          z-index: 9999;
+        }
+        @media (max-width: 768px) {
+          .wrapper {
+            padding: var(--ddd-spacing-2);
+            width: 100vw;
+            height: 100vw;
+          }
         }
       `,
     ];
@@ -144,9 +146,43 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html` <div class="wrapper">
       <h3><span>${this.t.title}:</span> ${this.title}</h3>
-      <slot></slot>
-      <scroll-button></scroll-button>
+      <portfolio-very>
+        <ul>
+          ${this.pages.map(
+            (page, index) =>
+              html`<li>
+                <a
+                  href="#${page.number}"
+                  @click="${this.linkChange}"
+                  data-index="${index}"
+                  >${page.title}</a
+                >
+              </li>`
+          )}
+        </ul>
+      </portfolio-very>
+      <div class="wrapper" @page-added="${this.addPage}">
+        <slot></slot>
+        <scroll-button></scroll-button>
+      </div>
     </div>`;
+  }
+
+  linkChange(e) {
+    let number = parseInt(e.target.getAttribute("data-index"));
+    if (number >= 0) {
+      this.pages[number].element.scrollIntoView();
+    }
+  }
+
+  addPage(e) {
+    const element = e.detail.value;
+    const page = {
+      number: element.pagenumber,
+      title: element.title,
+      element: element,
+    };
+    this.pages = [...this.pages, page];
   }
 
   /**

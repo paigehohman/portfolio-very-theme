@@ -4,15 +4,15 @@
  */
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
-import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
 /**
  * `final-test`
  *
  * @demo index.html
  * @element final-test
+ *
  */
-export class PortfolioVeryScreen extends DDDSuper(I18NMixin(LitElement)) {
+export class PortfolioVeryScreen extends DDDSuper(LitElement) {
   static get tag() {
     return "portfolio-very-screen";
   }
@@ -21,10 +21,6 @@ export class PortfolioVeryScreen extends DDDSuper(I18NMixin(LitElement)) {
     super();
     this.title = "";
     this.t = this.t || {};
-    this.t = {
-      ...this.t,
-      title: "Title",
-    };
   }
 
   // Lit reactive properties
@@ -43,6 +39,7 @@ export class PortfolioVeryScreen extends DDDSuper(I18NMixin(LitElement)) {
         :host {
           display: block;
           height: 100vh;
+          padding: 20px;
           color: var(--ddd-theme-primary);
           background-color: var(--ddd-theme-accent);
           font-family: var(--ddd-font-navigation);
@@ -50,6 +47,7 @@ export class PortfolioVeryScreen extends DDDSuper(I18NMixin(LitElement)) {
         .wrapper {
           margin: var(--ddd-spacing-2);
           padding: var(--ddd-spacing-4);
+          padding-top: 5px;
         }
         h3 span {
           font-size: var(--final-test-label-font-size, var(--ddd-font-size-s));
@@ -58,15 +56,15 @@ export class PortfolioVeryScreen extends DDDSuper(I18NMixin(LitElement)) {
           background-color: var(--ddd-theme-default-beaverBlue);
           color: var(--ddd-theme-default-slateMaxLight);
         }
-        :host(.research) {
+        :host(.resume) {
           background-color: var(--ddd-theme-default-beaver70);
           color: var(--ddd-theme-default-slateMaxLight);
         }
-        :host(.presentations) {
+        :host(.projects) {
           background-color: var(--ddd-theme-default-beaver80);
           color: var(--ddd-theme-default-slateMaxLight);
         }
-        :host(.professional) {
+        :host(.work) {
           background-color: var(--ddd-theme-default-navy40);
           color: var(--ddd-theme-default-slateMaxLight);
         }
@@ -81,7 +79,7 @@ export class PortfolioVeryScreen extends DDDSuper(I18NMixin(LitElement)) {
   // Lit render the HTML
   render() {
     return html` <div class="wrapper">
-      <h3><span>${this.t.title}:</span> ${this.title}</h3>
+      <h3>${this.title}</h3>
       <slot></slot>
     </div>`;
   }
