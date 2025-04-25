@@ -22,6 +22,8 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
     this.title = "";
     this.description = "";
     this.link = "";
+    this.link2 = "";
+    this.image = "";
   }
 
   // Lit reactive properties
@@ -31,6 +33,8 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
       title: { type: String },
       description: { type: String },
       link: { type: String },
+      link2: { type: String },
+      image: { type: String },
     };
   }
 
@@ -61,6 +65,12 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
         h3 {
           margin-top: 0;
         }
+        image {
+          width: 450px;
+          height: 450px;
+          border-radius: 50%;
+          border: 4px solid var(--ddd-theme-primary);
+        }
       `,
     ];
   }
@@ -74,9 +84,19 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
     return html`
       <h3>${this.title}</h3>
       <p>${this.description}</p>
-      <a href="${this.link}" target="_blank" rel="noopener noreferrer"
-        >View Project</a
-      >
+      <ul>
+        ${this.link
+          ? html`<li>
+              <a href="${this.link}" target="_blank">View Project</a>
+            </li>`
+          : ""}
+        ${this.link2
+          ? html`<li>
+              <a href="${this.link2}" target="_blank">Access GitHub</a>
+            </li>`
+          : ""}
+      </ul>
+      <img src="${this.image}" />
     `;
   }
 }
