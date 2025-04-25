@@ -163,15 +163,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         </ul>
       </portfolio-very>
       <div class="wrapper" @page-added="${this.addPage}">
-        <portfolio-very-screen class="projects" id="3" title="Projects">
-          <div class="project-card-container">
-            <project-card
-              title="Campus Locations Card List"
-              description="In this project, I am creating two web components: a card (<ddd-card>) and a card list (<ddd-card-list>). The card will display information about a campus, like its name, image, and a link. The card list will hold multiple cards and arrange them responsively. It will also manage the color scheme of the cards, with a primary color bar for each card and a background color for the list itself. The goal is to ensure the components match the Penn State design, use DDD styling, and are accessible and responsive. I will host the project on Vercel and share the code on GitHub."
-              link="https://ddd-card-list-topaz.vercel.app/"
-            ></project-card>
-          </div>
-        </portfolio-very-screen>
         <slot></slot>
         <scroll-button></scroll-button>
       </div>

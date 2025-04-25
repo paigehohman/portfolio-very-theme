@@ -85,4 +85,5 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
  * haxProperties integration via file reference
  */
 
-globalThis.customElements.define(ProjectCard.tag, ProjectCard);
+customElements.define(ProjectCard.tag, ProjectCard);
+//globalThis.customElements.define(ProjectCard.tag, ProjectCard);
