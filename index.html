@@ -83,31 +83,33 @@
       <portfolio-very-header> </portfolio-very-header>
     </div>
     <portfolio-very-theme data-accent="2" data-primary="2">
+      <!-- About Section: First Page -->
       <portfolio-very-screen class="about" id="1" title="About">
         <div class="about-content">
           <img src="Headshot.jpeg" alt="Headshot" class="profile-pic" />
           <div class="bio-text">
             <p>
-              Hi there, I'm Paige Hohman! I'm a second-year student at Penn
-              State University majoring in Enterprise Technology Integration.
-              I'm passionate about web design, networking, and software
-              development. I'm eager to apply the knowledge and skills I've
-              gained through my studies in real-world settings. I'm actively
-              seeking opportunities that will allow me to grow, contribute, and
-              make a meaningful impact.
+              Hi there, I'm Paige Hohman! I'm a second-year student at Penn State University majoring in Enterprise Technology Integration. I'm passionate about web design, networking, and software development. I'm eager to apply the knowledge and skills I've gained through my studies in real-world settings. I'm actively seeking opportunities that will allow me to grow, contribute, and make a meaningful impact.
             </p>
           </div>
         </div>
       </portfolio-very-screen>
-
+    
+      <!-- Resume Section: Second Page -->
       <portfolio-very-screen class="resume" id="2" title="Resume">
         <p>Resume</p>
       </portfolio-very-screen>
-
+    
+      <!-- Projects Section: Third Page (Make Sure This is id="3") -->
       <portfolio-very-screen class="projects" id="3" title="Projects">
-        <p>Presentations & Publications</p>
+        <h2>Campus Locations Card List</h2>
+        <p>
+          In this project, I am creating two web components: a card (<ddd-card>) and a card list (<ddd-card-list>). The card will display information about a campus, like its name, image, and a link. The card list will hold multiple cards and arrange them responsively. It will also manage the color scheme of the cards, with a primary color bar for each card and a background color for the list itself. The goal is to ensure the components match the Penn State design, use DDD styling, and are accessible and responsive. I will host the project on Vercel and share the code on GitHub.
+        </p>
+        <a href="https://ddd-card-list-topaz.vercel.app/" target="_blank">View Project</a>
       </portfolio-very-screen>
-
+    
+      <!-- Work Section: Fourth Page -->
       <portfolio-very-screen class="work" id="4" title="Work Experience">
         <div class="work-content">
           <img
@@ -124,7 +126,8 @@
           </div>
         </div>
       </portfolio-very-screen>
-
+    
+      <!-- Contact Section: Fifth Page -->
       <portfolio-very-screen class="contact" id="5" title="Contact">
         <div class="contact-content">
           <img
@@ -138,9 +141,7 @@
               <li>Phone: 724-900-8081</li>
               <li>
                 LinkedIn:
-                <a
-                  href="https://www.linkedin.com/in/paige-hohman-1b80a529a/"
-                  target="_blank"
+                <a href="https://www.linkedin.com/in/paige-hohman-1b80a529a/" target="_blank"
                   >www.linkedin.com/in/paigehohman</a
                 >
               </li>
@@ -150,7 +151,7 @@
         <p>Get In Touch</p>
       </portfolio-very-screen>
     </portfolio-very-theme>
-
+    
     <script type="module" src="./portfolio-very-theme.js"></script>
     <script type="module" src="./portfolio-very-screen.js"></script>
     <script type="module" src="./portfolio-very-header.js"></script>
