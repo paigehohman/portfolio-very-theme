@@ -48,28 +48,44 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
           color: var(--ddd-theme-primary);
           background-color: var(--ddd-theme-accent);
           font-family: var(--ddd-font-navigation);
-          padding: 1rem;
-          margin: 1rem;
+          padding: 2rem;
+          margin: 3rem auto;
           border-radius: 16px;
-          max-width: 400px;
+          max-width: 1000px;
         }
-        //  .wrapper {
-        //    margin: var(--ddd-spacing-2);
-        //    padding: var(--ddd-spacing-4);
-        //   }
+
         a {
           color: var(--ddd-theme-default-beaverBlue);
           font-weight: bold;
           text-decoration: none;
         }
         h3 {
-          margin-top: 0;
+          margin: 0;
+          font-size: 1.8rem;
         }
-        image {
-          width: 450px;
-          height: 450px;
-          border-radius: 50%;
+        img {
+          width: 400px;
+          height: auto;
+          border-radius: 8px;
           border: 4px solid var(--ddd-theme-primary);
+          object-fit: cover;
+        }
+        .project-content {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+        }
+        .text-project-content {
+          flex: 1;
+        }
+        p {
+          margin: 1rem 0;
+        }
+        @media (max-width: 600px) {
+          .project-content {
+            flex-direction: column;
+            text-align: center;
+          }
         }
       `,
     ];
@@ -82,21 +98,25 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
   // </div>`;
   render() {
     return html`
-      <h3>${this.title}</h3>
-      <p>${this.description}</p>
-      <ul>
-        ${this.link
-          ? html`<li>
-              <a href="${this.link}" target="_blank">View Project</a>
-            </li>`
-          : ""}
-        ${this.link2
-          ? html`<li>
-              <a href="${this.link2}" target="_blank">Access GitHub</a>
-            </li>`
-          : ""}
-      </ul>
-      <img src="${this.image}" />
+      <div class="project-content">
+        <img src="${this.image}" alt="Project Preview" />
+        <div class="text-project-content">
+          <h3>${this.title}</h3>
+          <p>${this.description}</p>
+          <ul>
+            ${this.link
+              ? html`<li>
+                  <a href="${this.link}" target="_blank">View Project</a>
+                </li>`
+              : ""}
+            ${this.link2
+              ? html`<li>
+                  <a href="${this.link2}" target="_blank">Access GitHub</a>
+                </li>`
+              : ""}
+          </ul>
+        </div>
+      </div>
     `;
   }
 }
