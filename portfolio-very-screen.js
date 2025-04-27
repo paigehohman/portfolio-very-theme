@@ -72,32 +72,28 @@ export class PortfolioVeryScreen extends DDDSuper(LitElement) {
           background-color: var(--ddd-theme-default-navy60);
           color: var(--ddd-theme-default-slateMaxLight);
         }
-        .contact-content {
+
+        .contact-wrapper {
           display: flex;
-          align-items: center;
-          justify-content: space-between;
+          align-items: center; /* center vertically */
+          justify-content: center; /* center horizontally */
+          flex-wrap: wrap; /* makes it responsive */
           gap: 2rem;
-          padding: 4rem 2rem 2rem 2rem;
-          max-width: 1000px;
-          margin: 0 auto;
+          padding: 150px 2rem 2rem; /* BIGGER padding-top to clear navbar */
         }
-        .text-contact-content {
-          flex: 1;
-          font-size: 1.2rem;
-          line-height: 1.5;
+
+        .contact-info {
+          font-size: 1.5rem;
+          line-height: 1.8;
+          text-align: left;
         }
-        .contact-content img {
-          width: 300px;
-          height: auto;
-          border-radius: 8px;
+
+        .contact-pic {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
           border: 4px solid var(--ddd-theme-primary);
           object-fit: cover;
-        }
-        @media (max-width: 600px) {
-          .contact-content {
-            flex-direction: column;
-            text-align: center;
-          }
         }
       `,
     ];

@@ -59,6 +59,8 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       screens: { type: Array },
       skipped: { type: Boolean, reflect: true },
       active: { type: Object },
+      title: { type: String },
+      pages: { type: Array },
     };
   }
 
@@ -96,15 +98,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         }
       }
     }
-  }
-
-  // Lit reactive properties
-  static get properties() {
-    return {
-      ...super.properties,
-      title: { type: String },
-      pages: { type: Array },
-    };
   }
 
   // Lit scoped styles

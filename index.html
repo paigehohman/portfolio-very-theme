@@ -40,11 +40,17 @@
         border-radius: 50%;
         border: 4px solid var(--ddd-theme-primary);
       }
+      .resume-pic {
+        width: 450px;
+        height: 450px;
+        border: 4px solid var(--ddd-theme-primary);
+      }
       .bio-text {
         max-width: 600px;
         text-align: left;
         margin-left: auto;
         font-size: 1.3rem;
+        padding-top: 10px;
       }
       .work-text {
         max-width: 600px;
@@ -52,6 +58,12 @@
         margin-left: auto;
         font-size: 1.3rem;
         line-height: 1.6;
+      }
+      .resume-text {
+        max-width: 600px;
+        text-align: left;
+        margin-left: auto;
+        font-size: 1rem;
       }
       .about-content {
         display: flex;
@@ -73,6 +85,7 @@
         padding: 2rem;
         max-width: 1000px;
         width: 100%;
+        padding-top: 100px;
       }
     </style>
     <title>portfolio-very-theme</title>
@@ -102,7 +115,31 @@
       </portfolio-very-screen>
 
       <portfolio-very-screen class="resume" id="2" title="Resume">
-        <p>Resume</p>
+        <div class="resume-content">
+          <img
+            src="1745689940507-08f06a8b-ad62-4ae2-87aa-e704568c76fa_1.jpg"
+            alt="ResumePJH"
+            class="resume-pic"
+          />
+          <div class="resume-text">
+            <p>
+              I am a second-year student at Penn State University, majoring in
+              Enterprise Technology Integration, with an expected graduation in
+              Spring 2027. Originally from Pittsburgh, PA, I have developed a
+              strong foundation in programming and web development, with skills
+              in Java, JavaScript, HTML, CSS, and more. In addition to my
+              academic work, I have hands-on experience in customer service,
+              having worked at Anthony’s Coal Fired Pizza and Pulp Juice &
+              Smoothie Bar. I also gained valuable technical experience by
+              collaborating with a team of peers to design a network
+              infrastructure solution for a company. Beyond academics and work
+              experience, I am actively involved in campus life. I serve as a
+              committee member for THON, the largest student-run philanthropy in
+              the world, and for the Special Olympics Club, supporting inclusive
+              initiatives within the community.
+            </p>
+          </div>
+        </div>
       </portfolio-very-screen>
 
       <portfolio-very-screen class="projects" id="3" title="Projects">
@@ -133,25 +170,16 @@
       </portfolio-very-screen>
 
       <portfolio-very-screen class="contact" id="5" title="Contact">
-        <div class="contact-content">
+        <div class="contact-wrapper">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/9/93/Google_Contacts_icon.svg"
-            alt="Logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Google_Contacts_icon.svg/1024px-Google_Contacts_icon.svg.png?20221102143815"
+            alt="Contact Image"
             class="contact-pic"
           />
-          <div class="text-contact-content">
-            <ul>
-              <li>Email: paigehohman@gmail.com</li>
-              <li>Phone: 724-900-8081</li>
-              <li>
-                LinkedIn:
-                <a
-                  href="https://www.linkedin.com/in/paige-hohman-1b80a529a/"
-                  target="_blank"
-                  >www.linkedin.com/in/paigehohman</a
-                >
-              </li>
-            </ul>
+          <div class="contact-info">
+            <p>Email: paigehohman@gmail.com</p>
+            <p>Phone: 724-900-8081</p>
+            <p>LinkedIn:</p>
           </div>
         </div>
       </portfolio-very-screen>
