@@ -106,7 +106,9 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
           <ul>
             ${this.link
               ? html`<li>
-                  <a href="${this.link}" target="_blank">View Project</a>
+                  <a href="${this.link}" target="_blank"
+                    >View Project on Vercel</a
+                  >
                 </li>`
               : ""}
             ${this.link2
