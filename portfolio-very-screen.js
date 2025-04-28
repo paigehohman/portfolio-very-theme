@@ -39,7 +39,7 @@ export class PortfolioVeryScreen extends DDDSuper(LitElement) {
         :host {
           display: block;
           height: 100vh;
-          padding: 20px;
+          padding: var(--ddd-spacing-5);
           color: var(--ddd-theme-primary);
           background-color: var(--ddd-theme-accent);
           font-family: var(--ddd-font-navigation);
@@ -47,7 +47,7 @@ export class PortfolioVeryScreen extends DDDSuper(LitElement) {
         .wrapper {
           margin: var(--ddd-spacing-2);
           padding: var(--ddd-spacing-4);
-          padding-top: 5px;
+          padding-top: var(--ddd-spacing-2);
         }
         h3 span {
           font-size: var(--final-test-label-font-size, var(--ddd-font-size-s));
@@ -78,12 +78,12 @@ export class PortfolioVeryScreen extends DDDSuper(LitElement) {
           align-items: center; /* center vertically */
           justify-content: center; /* center horizontally */
           flex-wrap: wrap; /* makes it responsive */
-          gap: 2rem;
+          gap: var(--ddd-spacing-4);
           padding: 150px 2rem 2rem; /* BIGGER padding-top to clear navbar */
         }
 
         .contact-info {
-          font-size: 1.5rem;
+          font-size: var(--ddd-spacing-3);
           line-height: 1.8;
           text-align: left;
         }

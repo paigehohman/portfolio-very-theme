@@ -9,6 +9,8 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 /**
  * `final-test`
  *
+ *
+ *
  * @demo index.html
  * @element final-test
  */

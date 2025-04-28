@@ -121,8 +121,8 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         }
         scroll-button {
           position: fixed;
-          right: 20px;
-          bottom: 20px;
+          right: var(--ddd-spacing-5);
+          bottom: var(--ddd-spacing-5);
           z-index: 9999;
         }
         @media (max-width: 768px) {

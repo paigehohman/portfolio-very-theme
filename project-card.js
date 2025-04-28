@@ -48,38 +48,39 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
           color: var(--ddd-theme-primary);
           background-color: var(--ddd-theme-accent);
           font-family: var(--ddd-font-navigation);
-          padding: 2rem;
+          padding: var(--ddd-spacing-4);
           margin: 3rem auto;
-          border-radius: 16px;
+          border-radius: var(--ddd-radius-lg);
           max-width: 1000px;
         }
 
         a {
           color: var(--ddd-theme-default-beaverBlue);
-          font-weight: bold;
+          font-weight: var(--ddd-font-weight-bold);
           text-decoration: none;
         }
         h3 {
-          margin: 0;
-          font-size: 1.8rem;
+          margin: var(--ddd-spacing-0);
+          font-size: var(--ddd-spacing-6);
         }
         img {
           width: 400px;
           height: auto;
-          border-radius: 8px;
+          border-radius: var(--ddd-radius-sm);
           border: 4px solid var(--ddd-theme-primary);
           object-fit: cover;
         }
         .project-content {
+          padding-top: 30px;
           display: flex;
           align-items: center;
-          gap: 2rem;
+          gap: var(---ddd-spacing-4);
         }
         .text-project-content {
           flex: 1;
         }
         p {
-          margin: 1rem 0;
+          margin: var(--ddd-spacing-4);
         }
         @media (max-width: 600px) {
           .project-content {

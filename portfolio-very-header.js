@@ -48,11 +48,11 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
         }
 
         your-banner a {
-          padding: 10px;
+          padding: var(--ddd-spacing-3);
           display: inline-block;
-          margin: 10px;
+          margin: var(--ddd-spacing-3);
           background-color: var(--ddd-theme-default-slateGray);
-          color: white;
+          color: var(--ddd-theme-default-white);
           text-decoration: none;
         }
 
@@ -63,9 +63,9 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
           background-color: var(--ddd-theme-default-nittanyNavy);
           position: fixed;
           top: 100px;
-          left: 0;
+          left: var(--ddd-spacing-0);
           height: 100px;
-          right: 0;
+          right: var(--ddd-spacing-0);
           z-index: 1;
         }
       `,
