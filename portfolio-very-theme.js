@@ -109,7 +109,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
           display: block;
           height: 100vh;
           color: var(--ddd-theme-primary);
-
           font-family: var(--ddd-font-navigation);
         }
 

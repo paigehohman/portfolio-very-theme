@@ -94,6 +94,9 @@ export class PortfolioVeryScreen extends DDDSuper(LitElement) {
           border: 4px solid var(--ddd-theme-primary);
           object-fit: cover;
         }
+        h3 {
+          padding: 0px 0px 0px;
+        }
       `,
     ];
   }

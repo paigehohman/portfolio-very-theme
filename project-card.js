@@ -37,7 +37,6 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
       image: { type: String },
     };
   }
-
   // Lit scoped styles
   static get styles() {
     return [
@@ -51,7 +50,9 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
           padding: var(--ddd-spacing-6);
           margin: var(--ddd-spacing-4);
           border-radius: var(--ddd-radius-lg);
-          max-width: 1000px;
+          max-width: 1200px;
+          align-items: center;
+          justify-content: center;
         }
         a {
           color: var(--ddd-theme-default-beaverBlue);
@@ -70,10 +71,12 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
           object-fit: cover;
         }
         .project-content {
-          padding-top: 30px;
+          padding: 100px;
           display: flex;
           align-items: center;
           gap: var(---ddd-spacing-4);
+          align-items: center;
+          justify-content: center;
         }
         .text-project-content {
           flex: 1;
