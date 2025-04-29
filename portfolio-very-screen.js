@@ -75,11 +75,11 @@ export class PortfolioVeryScreen extends DDDSuper(LitElement) {
 
         .contact-wrapper {
           display: flex;
-          align-items: center; /* center vertically */
-          justify-content: center; /* center horizontally */
-          flex-wrap: wrap; /* makes it responsive */
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
           gap: var(--ddd-spacing-4);
-          padding: 150px 2rem 2rem; /* BIGGER padding-top to clear navbar */
+          padding: 150px 2rem 2rem;
         }
 
         .contact-info {

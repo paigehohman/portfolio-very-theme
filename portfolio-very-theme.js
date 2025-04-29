@@ -123,7 +123,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
           position: fixed;
           right: var(--ddd-spacing-5);
           bottom: var(--ddd-spacing-5);
-          z-index: 9999;
         }
         @media (max-width: 768px) {
           .wrapper {

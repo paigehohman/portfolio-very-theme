@@ -82,12 +82,6 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
         p {
           margin: var(--ddd-spacing-4);
         }
-        @media (max-width: 600px) {
-          .project-content {
-            flex-direction: column;
-            text-align: center;
-          }
-        }
       `,
     ];
   }
@@ -128,5 +122,4 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
  * haxProperties integration via file reference
  */
 
-customElements.define(ProjectCard.tag, ProjectCard);
-//globalThis.customElements.define(ProjectCard.tag, ProjectCard);
+globalThis.customElements.define(ProjectCard.tag, ProjectCard);
