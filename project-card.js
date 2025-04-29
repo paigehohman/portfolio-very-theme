@@ -48,12 +48,11 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
           color: var(--ddd-theme-primary);
           background-color: var(--ddd-theme-accent);
           font-family: var(--ddd-font-navigation);
-          padding: var(--ddd-spacing-4);
-          margin: var(--ddd-spacing-2);
+          padding: var(--ddd-spacing-6);
+          margin: var(--ddd-spacing-4);
           border-radius: var(--ddd-radius-lg);
           max-width: 1000px;
         }
-
         a {
           color: var(--ddd-theme-default-beaverBlue);
           font-weight: var(--ddd-font-weight-bold);
