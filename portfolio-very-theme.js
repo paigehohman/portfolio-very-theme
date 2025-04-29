@@ -26,7 +26,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   constructor() {
     super();
     this.pages = [];
-    this.addEventListener("screen-change", (e) => {
+    this.pdf = this.addEventListener("screen-change", (e) => {
       let tmp = this.screen + parseInt(e.detail.direction);
       if (tmp > this.screens.length - 1) {
         tmp = this.screens.length - 1;
@@ -131,23 +131,21 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   // Lit render the HTML
   render() {
     return html` <div class="wrapper">
-      <h3><span>${this.t.title}:</span> ${this.title}</h3>
-      <portfolio-very>
-        <ul>
-          ${this.pages.map(
-            (page, index) =>
-              html`<li>
-                <a
-                  href="#${page.number}"
-                  @click="${this.linkChange}"
-                  data-index="${index}"
-                  >${page.title}</a
-                >
-              </li>`
-          )}
-        </ul>
-      </portfolio-very>
-      <div class="wrapper" @page-added="${this.addPage}">
+      <h3>${this.title}</h3>
+      <ul>
+        ${this.pages.map(
+          (page, index) =>
+            html`<li>
+              <a
+                href="#${page.number}"
+                @click="${this.linkChange}"
+                data-index="${index}"
+                >${page.title}</a
+              >
+            </li>`
+        )}
+      </ul>
+      <div class="wrapper">
         <slot></slot>
         <scroll-button></scroll-button>
       </div>

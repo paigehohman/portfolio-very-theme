@@ -47,7 +47,7 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
           font-family: var(--ddd-font-navigation);
         }
 
-        your-banner a {
+        .your-banner a {
           padding: var(--ddd-spacing-3);
           display: inline-block;
           margin: var(--ddd-spacing-3);
@@ -56,7 +56,7 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
           text-decoration: none;
         }
 
-        your-banner {
+        .your-banner {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -75,13 +75,13 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
   // Lit render the HTML
   render() {
     return html` <div class="wrapper">
-      <your-banner>
+      <div class="your-banner">
         <a href="#1">About</a>
         <a href="#2">Resume</a>
         <a href="#3">Projects</a>
         <a href="#4">Work Experience</a>
         <a href="#5">Contact</a>
-      </your-banner>
+      </div>
       <slot></slot>
     </div>`;
   }
