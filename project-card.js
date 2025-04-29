@@ -64,16 +64,16 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
           font-size: var(--ddd-spacing-6);
         }
         img {
-          width: 400px;
+          width: 500px;
+          height: 300px;
           height: auto;
           border-radius: var(--ddd-radius-sm);
           border: 4px solid var(--ddd-theme-primary);
           object-fit: cover;
         }
         .project-content {
-          padding: 100px;
+          padding: 75px;
           display: flex;
-          align-items: center;
           gap: var(---ddd-spacing-4);
           align-items: center;
           justify-content: center;
