@@ -124,13 +124,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
           right: var(--ddd-spacing-5);
           bottom: var(--ddd-spacing-5);
         }
-        @media (max-width: 768px) {
-          .wrapper {
-            padding: var(--ddd-spacing-2);
-            width: 100vw;
-            height: 100vw;
-          }
-        }
       `,
     ];
   }
