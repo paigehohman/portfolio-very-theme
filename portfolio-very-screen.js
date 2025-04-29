@@ -79,7 +79,6 @@ export class PortfolioVeryScreen extends DDDSuper(LitElement) {
           justify-content: center;
           flex-wrap: wrap;
           gap: var(--ddd-spacing-4);
-          padding: 150px 2rem 2rem;
         }
 
         .contact-info {
