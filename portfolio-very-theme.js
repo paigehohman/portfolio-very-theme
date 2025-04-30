@@ -110,6 +110,8 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
           height: 100vh;
           color: var(--ddd-theme-primary);
           font-family: var(--ddd-font-navigation);
+          margin: 0;
+          padding: 0;
         }
 
         h3 span {
@@ -122,6 +124,12 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
           position: fixed;
           right: var(--ddd-spacing-5);
           bottom: var(--ddd-spacing-5);
+        }
+        @media (max-width: 742px) {
+          .wrapper {
+            width: 100vw;
+            height: auto;
+          }
         }
       `,
     ];

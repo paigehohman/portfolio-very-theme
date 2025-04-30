@@ -49,6 +49,7 @@ export class PortfolioVeryScreen extends DDDSuper(LitElement) {
           padding: var(--ddd-spacing-4);
           padding-top: var(--ddd-spacing-2);
         }
+
         h3 span {
           font-size: var(--final-test-label-font-size, var(--ddd-font-size-s));
         }
@@ -96,6 +97,14 @@ export class PortfolioVeryScreen extends DDDSuper(LitElement) {
         }
         h3 {
           padding: 0px 0px 0px;
+        }
+        @media (max-width: 742px) {
+          .wrapper {
+            width: 100vw;
+            height: auto;
+            display: flex;
+            flex-direction: column-reverse;
+          }
         }
       `,
     ];
