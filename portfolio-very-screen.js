@@ -103,7 +103,7 @@ export class PortfolioVeryScreen extends DDDSuper(LitElement) {
             width: 100vw;
             height: auto;
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
           }
         }
       `,
