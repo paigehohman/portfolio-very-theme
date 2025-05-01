@@ -72,7 +72,7 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
           object-fit: cover;
         }
         .project-content {
-          padding: 75px;
+          padding: var(--ddd-spacing-19);
           display: flex;
           gap: var(---ddd-spacing-4);
           align-items: center;

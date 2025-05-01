@@ -62,7 +62,7 @@ export class PortfolioVeryHeader extends DDDSuper(I18NMixin(LitElement)) {
           align-items: center;
           background-color: var(--ddd-theme-default-nittanyNavy);
           position: fixed;
-          top: 100px;
+          top: var(--ddd-spacing-25);
           left: var(--ddd-spacing-0);
           height: 100px;
           right: var(--ddd-spacing-0);

@@ -110,8 +110,8 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
           height: 100vh;
           color: var(--ddd-theme-primary);
           font-family: var(--ddd-font-navigation);
-          margin: 0;
-          padding: 0;
+          margin: var(--ddd-spacing-0);
+          padding: var(--ddd-spacing-0);
         }
 
         h3 span {
