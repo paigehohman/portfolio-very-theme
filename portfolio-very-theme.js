@@ -107,7 +107,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
       css`
         :host {
           display: block;
-          height: 100vh;
           color: var(--ddd-theme-primary);
           font-family: var(--ddd-font-navigation);
           margin: var(--ddd-spacing-0);
@@ -124,12 +123,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
           position: fixed;
           right: var(--ddd-spacing-5);
           bottom: var(--ddd-spacing-5);
-        }
-        @media (max-width: 742px) {
-          .wrapper {
-            width: 100vw;
-            height: auto;
-          }
         }
       `,
     ];

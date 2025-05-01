@@ -47,6 +47,7 @@ export class PortfolioVeryScroll extends DDDSuper(I18NMixin(LitElement)) {
           color: var(--ddd-theme-primary);
           background-color: var(--ddd-theme-accent);
           font-family: var(--ddd-font-navigation);
+          overflow: hidden;
         }
         .wrapper {
           margin: var(--ddd-spacing-2);

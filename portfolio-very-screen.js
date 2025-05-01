@@ -38,11 +38,11 @@ export class PortfolioVeryScreen extends DDDSuper(LitElement) {
       css`
         :host {
           display: block;
-          height: 100vh;
           padding: var(--ddd-spacing-5);
           color: var(--ddd-theme-primary);
           background-color: var(--ddd-theme-accent);
           font-family: var(--ddd-font-navigation);
+          overflow: hidden;
         }
         .wrapper {
           margin: var(--ddd-spacing-2);
@@ -98,10 +98,34 @@ export class PortfolioVeryScreen extends DDDSuper(LitElement) {
         h3 {
           padding: 0px 0px 0px;
         }
-        @media (max-width: 742px) {
-          .wrapper {
-            width: 100vw;
-            height: auto;
+        @media (max-width: 768px) {
+          .contact-wrapper,
+          .contact-info,
+          .contact-pic {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        @media (max-width: 425px) {
+          .contact-wrapper,
+          .contact-info,
+          .contact-pic {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        @media (max-width: 375px) {
+          .contact-wrapper,
+          .contact-info,
+          .contact-pic {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        @media (max-width: 320px) {
+          .contact-wrapper,
+          .contact-info,
+          .contact-pic {
             display: flex;
             flex-direction: column;
           }
