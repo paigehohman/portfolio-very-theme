@@ -84,6 +84,38 @@ export class ProjectCard extends DDDSuper(I18NMixin(LitElement)) {
         p {
           margin: var(--ddd-spacing-4);
         }
+        @media (max-width: 768px) {
+          img,
+          .project-content,
+          .text-project-content {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        @media (max-width: 425px) {
+          img,
+          .project-content,
+          .text-project-content {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        @media (max-width: 375px) {
+          img,
+          .project-content,
+          .text-project-content {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        @media (max-width: 320px) {
+          img,
+          .project-content,
+          .text-project-content {
+            display: flex;
+            flex-direction: column;
+          }
+        }
       `,
     ];
   }
